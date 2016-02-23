@@ -49,6 +49,9 @@
     - jsonlint
   sudo: yes
 
+- name: esvalidate test
+  command: 'esvalidate --version'
+
 - name: Ensure lounge configuration directory is present
   file:
     path: /etc/lounge
@@ -59,7 +62,7 @@
   template:
     src: config.js
     dest: /etc/lounge/config.js
-    validate: 'esvalidate --version'
+    validate: 'esvalidate %s'
   sudo: yes
   notify: Restart supervisord program
 
