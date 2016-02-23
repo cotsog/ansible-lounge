@@ -49,12 +49,6 @@
     - jsonlint
   sudo: yes
 
-- name: npm ls
-  command: 'npm ls'
-  
-- name: npm ls
-  command: 'npm ls --global'
-
 - name: Ensure lounge configuration directory is present
   file:
     path: /etc/lounge
