@@ -49,8 +49,11 @@
     - jsonlint
   sudo: yes
 
-- name: esvalidate test
-  command: 'esvalidate --version'
+- name: npm ls
+  command: 'npm ls'
+  
+- name: npm ls
+  command: 'npm ls --global'
 
 - name: Ensure lounge configuration directory is present
   file:
