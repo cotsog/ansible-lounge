@@ -59,7 +59,7 @@
   template:
     src: config.js
     dest: /etc/lounge/config.js
-    validate: 'esvalidate %s'
+    validate: 'esvalidate --version'
   sudo: yes
   notify: Restart supervisord program
 
